@@ -32,6 +32,10 @@ class Instructor extends Person {
   grade(student, subject) {
     return `${student.name} receives a perfect score on ${subject}`
   }
+
+  eval_student(student) {
+    student.grade = (Math.floor(Math.random() * 100) + 1)
+  }
 }
 
 class Student extends Person {
@@ -40,6 +44,7 @@ class Student extends Person {
     this.previousBackground = param.previousBackground
     this.className = param.className
     this.favSubjects = param.favSubjects
+    this.grade = 100
   }
 
   listsSubjects() {

@@ -113,7 +113,23 @@ test('ProjectManager methods', t => {
     previousBackground: "Scuba Instructor", className: "DS19", favSubjects: ['Html', 'CSS', 'JavaScript']
   })
 
-  // Unique properties
   t.is(bob.standUp("cs1_sprintInfinity"), "Bob announces to cs1_sprintInfinity, @channel standy times!")
   t.is(bob.debugsCode(jane, "DS19"), "Bob debugs Jane's code on DS19")
+})
+
+test('ProjectManager #eval_student method', t => {
+  let bob = new ProjectManager({
+    name: "Bob", age: 30, location: "Texas", gender: "Male",
+    specialty: "react", favLanguage: "JavaScript", catchPhrase: "Don't forget the homies",
+    gradClassName: "CS1", favInstructor: "Sean"
+  })
+  let jane = new Student({
+    name: "Jane", age: 30, location: "Texas", gender: "Female",
+    previousBackground: "Scuba Instructor", className: "DS19", favSubjects: ['Html', 'CSS', 'JavaScript']
+  })
+
+  t.is(jane.grade, 100)
+  bob.eval_student(jane)
+  // console.log(`Jane's grade: ${jane.grade}`)
+  t.truthy(jane.grade <= 100 && jane.grade >= 0)
 })
