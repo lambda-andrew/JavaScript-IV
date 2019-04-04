@@ -20,15 +20,7 @@ Prototype Refactor
   * dimensions (These represent the character's size in the video game)
   * destroy() // prototype method -> returns the string 'GameObject was removed from the game.'
 */
-// function GameObject(options) {
-//     this.createdAt = options.createdAt;
-//     this.dimensions = options.dimensions;
-//     this.name = options.name;
-//   }
 
-//   GameObject.prototype.destroy = function () {
-//     return `${this.name} was removed from the game.`;
-//   };
 
 class GameObject {
   constructor(options) {
@@ -50,10 +42,6 @@ class GameObject {
   * should inherit destroy() from GameObject's prototype
   */
 
-// function CharacterStats(characterStatsOptions) {
-//   GameObject.call(this, characterStatsOptions);
-//   this.healthPoints = characterStatsOptions.healthPoints;
-// }
 class CharacterStats extends GameObject {
   constructor(characterStatsOptions) {
     super(characterStatsOptions);
@@ -64,12 +52,6 @@ class CharacterStats extends GameObject {
   }
 }
 
-// Sets up inheritance with GameObject
-// CharacterStats.prototype = Object.create(GameObject.prototype);
-
-// CharacterStats.prototype.takeDamage = function() {
-//   return `${this.name} took damage.`;
-// };
 
 /*
   === Humanoid (Having an appearance or character resembling that of a human.) ===
@@ -80,18 +62,6 @@ class CharacterStats extends GameObject {
   * should inherit destroy() from GameObject through CharacterStats
   * should inherit takeDamage() from CharacterStats
   */
-// function Humanoid(humanoidOptions) {
-//   CharacterStats.call(this, humanoidOptions);
-//   this.team = humanoidOptions.team;
-//   this.weapons = humanoidOptions.weapons;
-//   this.language = humanoidOptions.language;
-// }
-
-// Humanoid.prototype = Object.create(CharacterStats.prototype);
-
-// Humanoid.prototype.greet = function() {
-//   return `${this.name} offers a greeting in ${this.language}.`;
-// };
 class Humanoid extends CharacterStats {
   constructor(humanoidOptions) {
     super(humanoidOptions);
