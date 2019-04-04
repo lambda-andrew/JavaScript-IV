@@ -1,9 +1,10 @@
 // CODE here for your Lambda Classes
-// CODE here for your Lambda Classes
 /*
  * Lambda Classes assginment is to build virtual rooster of Lambda school personnel.
  */
 
+const CONST_ADD = "ADD";
+const CONST_SUB = "SUB";
 /*
  * Creating the base class - Person
  * Class Name - Person
@@ -49,6 +50,16 @@ class Instructor extends Person {
     return `${student.pName} receives a perfect score on ${subject}`;
   }
 
+  //buildGrade method - gradeChangeIndicator takes in "ADD" to add and "SUB" to subtracT
+  buildGrade(student, gradeChangeIndicator) {
+    var gradeChange = Math.floor(Math.random() * 11);
+    if (gradeChangeIndicator === CONST_ADD) {
+      student.sGrade = student.sGrade + gradeChange;
+    } else {
+      student.sGrade = student.sGrade - gradeChange;
+    }
+    return `${student.pName}'s grade is ${student.sGrade}`;
+  }
 }
 
 /*
@@ -77,6 +88,14 @@ class Student extends Person {
     return `${this.pName} has requested a PR on ${subject}`;
   }
 
+  //graduate method
+  graduate() {
+    if (this.sGrade > 70) {
+      return `Congratulations ${this.pName} on graduating from Lambda!`;
+    } else {
+      return `${this.pName} you need a little more work before graduation!`;
+    }
+  }
 }
 
 /*
@@ -114,7 +133,8 @@ const shawnSpencer = new Student({
   gender: "Male",
   prevBackground: "Hockey player",
   className: "WEB19",
-  favSubjects: ["HTML", "CSS", "Python", "Geology", "Psychic"]
+  favSubjects: ["HTML", "CSS", "Python", "Geology", "Psychic"],
+  grade: 80
 });
 
 const gusBurton = new Student({
@@ -124,7 +144,8 @@ const gusBurton = new Student({
   gender: "Male",
   prevBackground: "Sales Representative",
   className: "WEB19",
-  favSubjects: ["Java", "JSP", "Ruby", "Medical Terminology", "Psychic"]
+  favSubjects: ["Java", "JSP", "Ruby", "Medical Terminology", "Psychic"],
+  grade: 90
 });
 
 const buzz = new Student({
@@ -134,7 +155,8 @@ const buzz = new Student({
   gender: "Male",
   prevBackground: "Police Constable",
   className: "WEB19",
-  favSubjects: ["DataScience", "Ruby"]
+  favSubjects: ["DataScience", "Ruby"],
+  grade: 75
 });
 
 const woody = new Student({
@@ -144,7 +166,8 @@ const woody = new Student({
   gender: "Male",
   prevBackground: "Coroner",
   className: "WEB19",
-  favSubjects: ["DS", "HTML", "OS"]
+  favSubjects: ["DS", "HTML", "OS"],
+  grade: 65
 });
 
 // Object instantiation - Instructors - Karen Vick, Henry Spencer
@@ -229,4 +252,16 @@ console.log(ohara.debugsCode(woody, "JS"));
 console.log(chiefVick.grade(woody, "JS"));
 console.log(chiefVick.grade(gusBurton, "JS"));
 console.log(henry.grade(shawnSpencer, "HTML"));
-console.log(henry.grade(buzz, "
+console.log(henry.grade(buzz, "HTML"));
+
+// BUILD GRADE
+console.log(chiefVick.buildGrade(woody, "SUB"));
+console.log(chiefVick.buildGrade(gusBurton, "ADD"));
+console.log(henry.buildGrade(shawnSpencer, "ADD"));
+console.log(henry.buildGrade(buzz, "SUB"));
+
+//ELIGIBLE TO GRADUATE
+console.log(shawnSpencer.graduate());
+console.log(gusBurton.graduate());
+console.log(buzz.graduate());
+console.log(woody.graduate());
