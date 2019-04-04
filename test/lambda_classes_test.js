@@ -29,7 +29,7 @@ test('Person parameters', t => {
   t.is(john.gender, "Male")
 })
 
-test('Person #speak method', t => {
+test('Person methods', t => {
   let john = new Person({ name: "John", age: 30, location: "Texas", gender: "Male"})
 
   t.is(john.speak(), 'Hello my name is John, I am from Texas.')
@@ -100,4 +100,20 @@ test('ProjectManager parameters', t => {
   // Unique properties
   t.is(bob.gradClassName, "CS1")
   t.is(bob.favInstructor, "Sean")
+})
+
+test('ProjectManager methods', t => {
+  let bob = new ProjectManager({
+    name: "Bob", age: 30, location: "Texas", gender: "Male",
+    specialty: "react", favLanguage: "JavaScript", catchPhrase: "Don't forget the homies",
+    gradClassName: "CS1", favInstructor: "Sean"
+  })
+  let jane = new Student({
+    name: "Jane", age: 30, location: "Texas", gender: "Female",
+    previousBackground: "Scuba Instructor", className: "DS19", favSubjects: ['Html', 'CSS', 'JavaScript']
+  })
+
+  // Unique properties
+  t.is(bob.standUp("cs1_sprintInfinity"), "Bob announces to cs1_sprintInfinity, @channel standy times!")
+  t.is(bob.debugsCode(jane, "DS19"), "Bob debugs Jane's code on DS19")
 })
