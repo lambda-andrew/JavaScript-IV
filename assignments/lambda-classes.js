@@ -104,3 +104,129 @@ class ProjectManager extends Instructor {
     return `${this.pName} debugs ${student.pName}'s code on ${subject}`;
   }
 }
+
+// Object instantiation - Students - Shawn Spencer, Burton Guster, Buzz McNab, Woody Strode
+
+const shawnSpencer = new Student({
+  name: "Shawn Spencer",
+  age: 25,
+  location: "Santa Barbara",
+  gender: "Male",
+  prevBackground: "Hockey player",
+  className: "WEB19",
+  favSubjects: ["HTML", "CSS", "Python", "Geology", "Psychic"]
+});
+
+const gusBurton = new Student({
+  name: "Burton Guster",
+  age: 25,
+  location: "Santa Barbara",
+  gender: "Male",
+  prevBackground: "Sales Representative",
+  className: "WEB19",
+  favSubjects: ["Java", "JSP", "Ruby", "Medical Terminology", "Psychic"]
+});
+
+const buzz = new Student({
+  name: "Buzz McNab",
+  age: 30,
+  location: "Santa Barbara",
+  gender: "Male",
+  prevBackground: "Police Constable",
+  className: "WEB19",
+  favSubjects: ["DataScience", "Ruby"]
+});
+
+const woody = new Student({
+  name: "Wood Strode",
+  age: 32,
+  location: "Santa Barbara",
+  gender: "Male",
+  prevBackground: "Coroner",
+  className: "WEB19",
+  favSubjects: ["DS", "HTML", "OS"]
+});
+
+// Object instantiation - Instructors - Karen Vick, Henry Spencer
+
+const chiefVick = new Instructor({
+  name: "Karen Vick",
+  age: 42,
+  location: "Santa Barbara",
+  gender: "Female",
+  speciality: "HTML",
+  favLanguage: "Python",
+  catchPhrase: "Get it done!"
+});
+
+const henry = new Instructor({
+  name: "Henry Spencer",
+  age: 50,
+  location: "Santa Barbara",
+  gender: "Male",
+  speciality: "JS",
+  favLanguage: "Java",
+  catchPhrase: "Never say tomorrow!"
+});
+
+// Object instantiation - Project Managers - Carlton Lassiter, Juliet O'Hara
+
+const lassie = new ProjectManager({
+  name: "Carlton Lassiter",
+  age: 45,
+  location: "Santa Barbara",
+  gender: "Male",
+  gradClassName: "WEB17",
+  favInstructor: "Karen Vick"
+});
+
+const ohara = new ProjectManager({
+  name: "Juliet O'hara",
+  age: 28,
+  location: "Santa Barbara",
+  gender: "Female",
+  gradClassName: "WEB17",
+  favInstructor: "Henry Spencer"
+});
+
+// INTRODUCTIONS
+console.log(shawnSpencer.speak());
+console.log(gusBurton.speak());
+console.log(buzz.speak());
+console.log(woody.speak());
+console.log(chiefVick.speak());
+console.log(henry.speak());
+console.log(ohara.speak());
+console.log(lassie.speak());
+
+// CLASS ANNOUNCEMENTS
+console.log(chiefVick.demo("JS"));
+console.log(henry.demo("HTML"));
+
+// STANDUP ANNOUNCEMENTS
+console.log(ohara.standUp("WEB19-OHARA"));
+console.log(lassie.standUp("WEB19-LASSITER"));
+
+//STUDENTS LISTS SUBJECTS
+console.log(shawnSpencer.listsSubjects());
+console.log(gusBurton.listsSubjects());
+console.log(buzz.listsSubjects());
+console.log(woody.listsSubjects());
+
+//STUDENTS SEND PRs
+console.log(shawnSpencer.PRAssignment("HTML"));
+console.log(gusBurton.PRAssignment("JS"));
+console.log(buzz.PRAssignment("HTML"));
+console.log(woody.PRAssignment("JS"));
+
+//PROJECT MANAGERS DEBUG CODE
+console.log(lassie.debugsCode(shawnSpencer, "HTML"));
+console.log(ohara.debugsCode(gusBurton, "JS"));
+console.log(lassie.debugsCode(buzz, "HTML"));
+console.log(ohara.debugsCode(woody, "JS"));
+
+//INSTRUCTOR GRADES THE STUDENTS
+console.log(chiefVick.grade(woody, "JS"));
+console.log(chiefVick.grade(gusBurton, "JS"));
+console.log(henry.grade(shawnSpencer, "HTML"));
+console.log(henry.grade(buzz, "
