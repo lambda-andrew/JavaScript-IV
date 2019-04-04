@@ -62,3 +62,127 @@
 // * ProjectManagers have the following Methods:
 //   * `standUp` a method that takes in a slack channel and logs `{name} announces to {channel}, @channel standy times!​​​​​
 //   * `debugsCode` a method that takes in a student object and a subject and logs out `{name} debugs {student.name}'s code on {subject}`
+
+
+
+
+class Person{
+    constructor(base){
+        this.name = base.name
+        this.age = base.age
+        this.location = base.location
+        this.gender = base.gender
+    }
+    speak(){
+        return(`Hello my name is ${this.name}, I am from ${this.location}`)
+    }
+}  
+
+class Instructor extends Person{
+    constructor(abils){
+        super(abils)
+
+        this.specialty = abils.specialty
+        this.favLanguage = abils.favLanguage
+        this.catchPhrase = abils.catchPhrase
+    }
+    demo(subject){
+        console.log(`Today we are learning about ${subject}`)
+    }
+    grade(student){
+        console.log(`${student.name} receives a perfect score on ${subject}`)
+    }
+}
+
+class Student extends Person{
+    constructor(skills){
+        super(skills)
+        this.previousBackground = skills.previousBackground
+        this.className = skills.className
+        this.favSubjects = skills.favSubjects
+
+    }
+    listsSubjects(){
+            this.favSubjects.forEach(function(subject){
+            console.log(subject)
+            })
+         }
+        PRAssignment(subject){
+            return (`${this.name} has submitted PR for ${subject}`)
+        }
+
+        springChallenge(subject){
+            return (`${this.name} has begun sprint challenge on ${subject}`)
+        }
+}
+
+class ProjectManagers extends Instructor{
+    constructor(talents){
+        super(talents)
+        this.gradClassName = talents.gradClassName
+        this.favInstructor = talents.favInstructor
+    }
+    standUp(channel){
+        return(`${this.name} announces to ${channel}`)
+    }
+    debugCode(student){
+        return(`${name} debugs ${student.name}'s code on ${subject}`)
+    }
+
+}
+
+let Brandon = new Student({
+    "name": "brandon",
+    "age" : 37,
+    "location": "Minneapolis",
+    "previousBackground" : "teacher",
+    "className" : "webDev19",
+    "favSubjects" : ["css","html","js"]
+})
+
+Brandon.listsSubjects()
+console.log(Brandon.PRAssignment("CSS"))
+console.log(Brandon.springChallenge("html"))
+let Sam = new ProjectManagers({
+    "name": "Sam",
+    "age":37,
+    "firstName": 'Fred',  
+    "lastName": 'Flintstone',
+    "location": 'Bedrock',
+    "gender" : "M",
+    "specialty" : "sword fighting",
+    "favLanguage" : "Korean",
+    "catchPhrase" : "You don't know me!",
+    "gradClassName" : "wd-12",
+    "favInstructor" : "Josh"
+
+})
+
+console.log(Sam.speak())
+
+console.log(Brandon)
+console.log(Sam)
+
+
+const myPersonalObject = {  
+    "firstName": 'Fred',  
+    "lastName": 'Flintstone',
+};  
+
+
+const values =Object.values(myPersonalObject)
+
+console.log(values)
+
+let keys = Object.keys(myPersonalObject)
+console.log(keys)
+
+let entries = Object.entries(myPersonalObject)
+
+console.log(entries)
+
+let keyss = Object.keys(myPersonalObject)
+
+let valuess = Object.values(myPersonalObject)
+
+entries = Object.entries(myPersonalObject)
