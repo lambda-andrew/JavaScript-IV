@@ -44,6 +44,20 @@ class Person {
     return  `${this.name} debugs ${this.student_name}'s code on ${this.subject}`;
   }
   }
+ class PManager extends Student {
+     constructor(ggchild){
+         super(ggchild);
+         this.gradClassName = ggchild.gradClassName;
+         this.favInstructor = ggchild.favInstructor;
+         this.channel = ggchild.channel;
+        }
+        standUp(){
+            return `${this.name} announces to ${this.channel} @standup time!`;
+        }
+        debugsCode(){
+            return `${this.name} debugs ${this.student_name}'s code on ${this.subject}`;
+        }
+ }
   
   const john = new Person({
     name: 'John',
@@ -53,7 +67,8 @@ class Person {
   });
   const sharron = new Instructor({
   name: 'sharron' ,
-    subject: 'JavaScript'
+    subject: 'JavaScript',
+    channel: 'web19_bill'
   });
   
   const Jim = new Student({
@@ -64,6 +79,13 @@ class Person {
     className:'web24',
     favSub: ['PHP', 'Python', 'Rest']
   });
+  const Bill = new PManager({
+    name:'Bill',
+    student_name: 'sharron',
+    channel: 'web19_bill',
+    subject: 'php',
+    channel: 'web19_bill'
+  });
   
   console.log(  john.speak());
   console.log(sharron.demo());
@@ -71,3 +93,5 @@ class Person {
   console.log(Jim.PRAssign());
   console.log(Jim.sprintChal());
   console.log(Jim.debugsCode());
+  console.log(Bill.standUp());
+  console.log(Bill.debugsCode());
