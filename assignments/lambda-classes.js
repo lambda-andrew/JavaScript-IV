@@ -20,6 +20,9 @@ class Person {
 class Instructor extends Person {
   constructor(param) {
     super(param)
+    this.specialty = param.specialty
+    this.favLanguage = param.favLanguage
+    this.catchPhrase = param.catchPhrase
   }
 }
 

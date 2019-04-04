@@ -34,3 +34,21 @@ test('Person speak function', t => {
 
   t.is(john.speak(), 'Hello my name is John, I am from Texas.')
 })
+
+test('Instructor parameters', t => {
+  let john = new Instructor({
+    name: "John", age: 30, location: "Texas", gender: "Male",
+    specialty: "redux", favLanguage: "JavaScript", catchPhrase: "Don't forget the homies"
+  })
+
+  // Inherited properties
+  t.is(john.name, "John")
+  t.is(john.age, 30)
+  t.is(john.location, "Texas")
+  t.is(john.gender, "Male")
+
+  // Unique properties
+  t.is(john.specialty, "redux")
+  t.is(john.favLanguage, "JavaScript")
+  t.is(john.catchPhrase, "Don't forget the homies")
+})
