@@ -80,7 +80,9 @@ class Student extends Person {
 
   // listsSubjects() method
   listsSubjects() {
-    return this.sFavSubjects;
+    return `This is ${
+      this.pName
+    } and my favorite subjects are ${this.sFavSubjects.toString()}`;
   }
 
   // PRAssignments method
