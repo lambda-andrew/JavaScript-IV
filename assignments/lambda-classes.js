@@ -32,7 +32,7 @@ class Student extends Person {
         this.favSubjects = studentAttributes.favSubjects;
     }
     listSubjects(){
-        console.log(studentAttributes.favSubjects);
+        console.log(studentAttributes.favSubjects.forEach());
     }
     prAssignment(subject){
         console.log(`${student.name} has submitted a PR for ${subject}.`);
@@ -56,112 +56,103 @@ class ProjectManager extends Instructor{
 }
 
 // Instructors
-const   = new Instructor({
-    name: ,
-    age: ,
-    location: ,
-    gender: ,
-    specialty: ,
-    favLanguage: ,
-    catchPhrase:
+const josh = new Instructor({
+    name: "Josh Knell",
+    age: 37,
+    location: "an alternate reality",
+    gender: "male",
+    specialty: "Teaching",
+    favLanguage: "JavaScript",
+    catchPhrase: "What the freak!?"
 });
 
-const   = new Instructor({
-    name: ,
-    age: ,
-    location: ,
-    gender: ,
-    specialty: ,
-    favLanguage: ,
-    catchPhrase:
+const dan = new Instructor({
+    name: "Dan",
+    age: 40,
+    location: "the Future",
+    gender: "male",
+    specialty: "Being awesome" ,
+    favLanguage: "ALL OF THEM",
+    catchPhrase: "Don't forget to save."
 });
 
 // Project Managers
 
-const   = new ProjectManager({
-    name: ,
-    age: ,
-    location: ,
-    gender: ,
-    specialty: ,
-    favLanguage: ,
-    catchPhrase: ,
-    gradClassName: ,
-    favInstructor: ,
+const andrew = new ProjectManager({
+    name: "Andrew Benedict",
+    age: 48,
+    location: "a place outside of time",
+    gender: "male",
+    specialty: "Guidance",
+    favLanguage: "React",
+    catchPhrase: "You can do it",
+    gradClassName: "Web18",
+    favInstructor: "Living life",
 });
 
-const   = new ProjectManager({
-    name: ,
-    age: ,
-    location: ,
-    gender: ,
-    specialty: ,
-    favLanguage: ,
-    catchPhrase: ,
-    gradClassName: ,
-    favInstructor: ,
+const gary = new ProjectManager({
+    name: "Gary",
+    age: 24,
+    location: "Bikini Bottom",
+    gender: "male",
+    specialty: "poetry",
+    favLanguage: "C++",
+    catchPhrase: "meow",
+    gradClassName: "Ux17",
+    favInstructor: "Mrs. Puff",
 });
 
-const   = new ProjectManager({
-    name: ,
-    age: ,
-    location: ,
-    gender: ,
-    specialty: ,
-    favLanguage: ,
-    catchPhrase: ,
-    gradClassName: ,
-    favInstructor: ,
+const samantha = new ProjectManager({
+    name: "Samantha" ,
+    age: 37,
+    location: "Alaska",
+    gender: "female",
+    specialty: "wrestling bears",
+    favLanguage: "HTML5",
+    catchPhrase: "Check this out.",
+    gradClassName: "Web18",
+    favInstructor: "Josh",
 });
 
 // Students
 
-const   = new Student({
-    name: ,
-    age: ,
-    location: ,
-    gender: ,
-    previousBackground: ,
-    className: ,
-    favSubjects: ,
+const preston = new Student({
+    name: "Preston",
+    age: "28",
+    location: "Oregon",
+    gender: "male",
+    previousBackground: "Coffee",
+    className: "Web19",
+    favSubjects: [".less", "HTML5", "BootStrap", "CSS3"]  
 });
 
-const   = new Student({
-    name: ,
-    age: ,
-    location: ,
-    gender: ,
-    previousBackground: ,
-    className: ,
-    favSubjects: ,
+const jenni = new Student({
+    name: "Jennifer",
+    age: 27,
+    location: "Oregon",
+    gender: "female",
+    previousBackground: "Anthropology",
+    className: "Ux20",
+    favSubjects: ["design", "color theory", "form and function"]
 });
 
-const   = new Student({
-    name: ,
-    age: ,
-    location: ,
-    gender: ,
-    previousBackground: ,
-    className: ,
-    favSubjects: ,
+const cameron = new Student({
+    name: "Cameron",
+    age: 30,
+    location: "Kansas",
+    gender: "male",
+    previousBackground: "skateboarder",
+    className: "ios20",
+    favSubjects: ["kick flips","css animation","chillin'"]
 });
 
-const   = new Student({
-    name: ,
-    age: ,
-    location: ,
-    gender: ,
-    previousBackground: ,
-    className: ,
-    favSubjects: ,
+const tyler = new Student({
+    name: "Tyler",
+    age: 26,
+    location: "Oregon",
+    gender: "male",
+    previousBackground: "Hospitality",
+    className: "Data Science",
+    favSubjects: ["data structure","algorithms","deep learning"]
 });
 
-const   = new Student({
-    name: ,
-    age: ,
-    location: ,
-    gender: ,
-    previousBackground: ,
-    className: ,
-    favSubjects: ,
-});
