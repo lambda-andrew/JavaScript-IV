@@ -14,7 +14,7 @@ const lambda_classes = require('../assignments/lambda-classes')
 const Person = lambda_classes.Person
 const Instructor = lambda_classes.Instructor
 const Student = lambda_classes.Student
-const ProjectManagers = lambda_classes.ProjectManagers
+const ProjectManager = lambda_classes.ProjectManager
 
 /**
  * Assertions
@@ -79,4 +79,25 @@ test('Student methods', t => {
 
   t.is(jane.PRAssignment("JavaScript Fundamentals"), `Jane has submitted a PR for JavaScript Fundamentals`)
   t.is(jane.sprintChallenge("JavaScript Fundamentals"), `Jane has begun sprint challenge on JavaScript Fundamentals`)
+})
+
+test('ProjectManager parameters', t => {
+  let bob = new ProjectManager({
+    name: "Bob", age: 30, location: "Texas", gender: "Male",
+    specialty: "react", favLanguage: "JavaScript", catchPhrase: "Don't forget the homies",
+    gradClassName: "CS1", favInstructor: "Sean"
+  })
+
+  // Inherited properties
+  t.is(bob.name, "Bob")
+  t.is(bob.age, 30)
+  t.is(bob.location, "Texas")
+  t.is(bob.gender, "Male")
+  t.is(bob.specialty, "react")
+  t.is(bob.favLanguage, "JavaScript")
+  t.is(bob.catchPhrase, "Don't forget the homies")
+
+  // Unique properties
+  t.is(bob.gradClassName, "CS1")
+  t.is(bob.favInstructor, "Sean")
 })

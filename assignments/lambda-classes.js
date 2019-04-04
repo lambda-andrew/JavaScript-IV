@@ -58,6 +58,8 @@ class Student extends Person {
 class ProjectManager extends Instructor {
   constructor(param) {
     super(param)
+    this.gradClassName = param.gradClassName
+    this.favInstructor = param.favInstructor
   }
 }
 
