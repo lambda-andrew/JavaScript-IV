@@ -41,6 +41,18 @@ class Student extends Person {
     this.className = param.className
     this.favSubjects = param.favSubjects
   }
+
+  listsSubjects() {
+    this.favSubjects.forEach(subject => console.log(subject))
+  }
+
+  PRAssignment(subject) {
+    return `${this.name} has submitted a PR for ${subject}`
+  }
+
+  sprintChallenge(subject) {
+    return `${this.name} has begun sprint challenge on ${subject}`
+  }
 }
 
 class ProjectManager extends Instructor {

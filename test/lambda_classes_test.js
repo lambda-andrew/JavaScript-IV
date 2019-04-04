@@ -29,7 +29,7 @@ test('Person parameters', t => {
   t.is(john.gender, "Male")
 })
 
-test('Person speak function', t => {
+test('Person #speak method', t => {
   let john = new Person({ name: "John", age: 30, location: "Texas", gender: "Male"})
 
   t.is(john.speak(), 'Hello my name is John, I am from Texas.')
@@ -69,4 +69,14 @@ test('Student parameters', t => {
   t.is(jane.previousBackground, "Scuba Instructor")
   t.is(jane.className, "DS19")
   t.truthy(jane.favSubjects.includes("CSS"))
+})
+
+test('Student methods', t => {
+  let jane = new Student({
+    name: "Jane", age: 30, location: "Texas", gender: "Female",
+    previousBackground: "Scuba Instructor", className: "DS19", favSubjects: ['Html', 'CSS', 'JavaScript']
+  })
+
+  t.is(jane.PRAssignment("JavaScript Fundamentals"), `Jane has submitted a PR for JavaScript Fundamentals`)
+  t.is(jane.sprintChallenge("JavaScript Fundamentals"), `Jane has begun sprint challenge on JavaScript Fundamentals`)
 })
