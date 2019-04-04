@@ -1,13 +1,38 @@
-// CODE here for your Lambda Classes
+'use strict'
 
-// Create 2 - 3 objects for each class and test their attributes:
+/**
+ * Define classes
+ */
 
-// const fred = new Instructor({
-//   name: 'Fred',
-//   location: 'Bedrock',
-//   age: 37,
-//   gender: 'male',
-//   favLanguage: 'JavaScript',
-//   specialty: 'Front-end',
-//   catchPhrase: `Don't forget the homies`
-// });
+class Person {
+  constructor(param) { }
+}
+
+class Instructor extends Person {
+  constructor(param) {
+    super(param)
+  }
+}
+
+class Student extends Person {
+  constructor(param) {
+    super(param)
+  }
+}
+
+class ProjectManager extends Instructor {
+  constructor(param) {
+    super(param)
+  }
+}
+
+/**
+ * Export classes
+ */
+
+module.exports = {
+  Person: Person,
+  Instructor: Instructor,
+  Student: Student,
+  ProjectManager: ProjectManager,
+}
