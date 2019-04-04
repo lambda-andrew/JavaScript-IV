@@ -54,3 +54,114 @@ class ProjectManager extends Instructor{
         console.log(`${name} debugs ${student.name}'s code on ${subject}.`);
     }
 }
+
+// Instructors
+const   = new Instructor({
+    name: ,
+    age: ,
+    location: ,
+    gender: ,
+    specialty: ,
+    favLanguage: ,
+    catchPhrase:
+});
+
+const   = new Instructor({
+    name: ,
+    age: ,
+    location: ,
+    gender: ,
+    specialty: ,
+    favLanguage: ,
+    catchPhrase:
+});
+
+// Project Managers
+
+const   = new ProjectManager({
+    name: ,
+    age: ,
+    location: ,
+    gender: ,
+    specialty: ,
+    favLanguage: ,
+    catchPhrase: ,
+    gradClassName: ,
+    favInstructor: ,
+});
+
+const   = new ProjectManager({
+    name: ,
+    age: ,
+    location: ,
+    gender: ,
+    specialty: ,
+    favLanguage: ,
+    catchPhrase: ,
+    gradClassName: ,
+    favInstructor: ,
+});
+
+const   = new ProjectManager({
+    name: ,
+    age: ,
+    location: ,
+    gender: ,
+    specialty: ,
+    favLanguage: ,
+    catchPhrase: ,
+    gradClassName: ,
+    favInstructor: ,
+});
+
+// Students
+
+const   = new Student({
+    name: ,
+    age: ,
+    location: ,
+    gender: ,
+    previousBackground: ,
+    className: ,
+    favSubjects: ,
+});
+
+const   = new Student({
+    name: ,
+    age: ,
+    location: ,
+    gender: ,
+    previousBackground: ,
+    className: ,
+    favSubjects: ,
+});
+
+const   = new Student({
+    name: ,
+    age: ,
+    location: ,
+    gender: ,
+    previousBackground: ,
+    className: ,
+    favSubjects: ,
+});
+
+const   = new Student({
+    name: ,
+    age: ,
+    location: ,
+    gender: ,
+    previousBackground: ,
+    className: ,
+    favSubjects: ,
+});
+
+const   = new Student({
+    name: ,
+    age: ,
+    location: ,
+    gender: ,
+    previousBackground: ,
+    className: ,
+    favSubjects: ,
+});
