@@ -5,7 +5,12 @@
  */
 
 class Person {
-  constructor(param) { }
+  constructor(param) {
+    this.name = param.name
+    this.age = param.age
+    this.location = param.location
+    this.gender = param.gender
+  }
 }
 
 class Instructor extends Person {
