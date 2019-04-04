@@ -6,10 +6,11 @@ class Person {
         this.location = attributes.location;
         this.gender = attributes.gender;
     }
-    speak(){
+    speak() {
         console.log(`Hello my name is ${this.name}, I am from ${this.location}.`);
     }
 }
+// Instructor Class
 class Instructor extends Person{
     constructor(instAttributes){
         super(instAttributes);
@@ -21,9 +22,24 @@ class Instructor extends Person{
         console.log(`Today we are learning about ${subject}!`);
     }
     grade(student,subject){
-        console.log(`${student.name} receives a perfect score on ${subject}`);
+        console.log(`${student.name} receives a perfect score on ${subject}!`);
     }
 }
+// Project Managers Class
+class ProjectManager extends Instructor{
+    constructor(pmAttributes){
+        super(pmAttributes);
+        this.gradClassName = pmAttributes.gradClassName;
+        this.favInstructor = pmAttributes.favInstructor;
+    }
+    standUp(channel){
+        console.log(`${this.name} announces to ${channel}, @${channel} standy times!`);
+    }
+    debugsCode(student,subject){
+        console.log(`${this.name} debugs ${student.name}'s code on ${subject}.`);
+    }
+}
+// Student Class
 class Student extends Person {
     constructor(studentAttributes){
         super(studentAttributes);
@@ -32,26 +48,13 @@ class Student extends Person {
         this.favSubjects = studentAttributes.favSubjects;
     }
     listSubjects(){
-        console.log(studentAttributes.favSubjects.forEach());
+        console.log(this.favSubjects.toString());
     }
     prAssignment(subject){
-        console.log(`${student.name} has submitted a PR for ${subject}.`);
+        console.log(`${this.name} has submitted a PR for ${subject}.`);
     }
     sprintChallenge(subject){
-        console.log(`${student.name} has begun sprint challenge on ${subject}.`);
-    }
-}
-class ProjectManager extends Instructor{
-    constructor(pmAttributes){
-        super(pmAttributes);
-        this.gradClassName = pmAttributes.gradClassName;
-        this.favInstructor = pmAttributes.favInstructor;
-    }
-    standUp(channel){
-        console.log(`${name} announces to ${channel}, @${channel} standy times!`);
-    }
-    debugsCode(student,subject){
-        console.log(`${name} debugs ${student.name}'s code on ${subject}.`);
+        console.log(`${this.name} has begun sprint challenge on ${subject}.`);
     }
 }
 
@@ -77,7 +80,6 @@ const dan = new Instructor({
 });
 
 // Project Managers
-
 const andrew = new ProjectManager({
     name: "Andrew Benedict",
     age: 48,
@@ -115,7 +117,6 @@ const samantha = new ProjectManager({
 });
 
 // Students
-
 const preston = new Student({
     name: "Preston",
     age: "28",
@@ -143,7 +144,7 @@ const cameron = new Student({
     gender: "male",
     previousBackground: "skateboarder",
     className: "ios20",
-    favSubjects: ["kick flips","css animation","chillin'"]
+    favSubjects: ["kick flips","css animation","chillin"]
 });
 
 const tyler = new Student({
@@ -156,3 +157,30 @@ const tyler = new Student({
     favSubjects: ["data structure","algorithms","deep learning"]
 });
 
+
+
+josh.speak();
+josh.demo("the banjo");
+josh.grade(preston,"JavaScript");
+dan.speak();
+dan.demo("React");
+dan.grade(jenni,"design");
+
+andrew.speak();
+andrew.standUp("web19-ab");
+andrew.debugsCode(cameron,"JS");
+gary.speak();
+gary.standUp("the-shell");
+gary.debugsCode(tyler,"python");
+samantha.speak();
+samantha.standUp("mom's basement");
+samantha.debugsCode(preston,"React");
+
+preston.speak();
+preston.listSubjects();
+preston.prAssignment("Sprint15");
+preston.sprintChallenge("Complete and Total Mastery");
+tyler.speak()
+tyler.listSubjects();
+tyler.prAssignment();
+tyler.sprintChallenge("Making Data Work for You!");
