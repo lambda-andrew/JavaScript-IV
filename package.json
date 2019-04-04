@@ -2,9 +2,10 @@
   "name": "JavaScript-IV",
   "version": "0.1.0",
   "description": "This challenge focuses on classes in JavaScript using the new `class` keyword.",
-  "main": "index.js",
+  "main": "ava --verbose",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "ava --verbose",
+    "test:watch": "ava --verbose --watch"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/lambda-andrew/JavaScript-IV/issues"
   },
-  "homepage": "https://github.com/lambda-andrew/JavaScript-IV#readme"
+  "homepage": "https://github.com/lambda-andrew/JavaScript-IV#readme",
+  "devDependencies": {
+    "ava": "^1.4.1"
+  }
 }
