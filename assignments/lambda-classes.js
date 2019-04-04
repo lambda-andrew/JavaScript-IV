@@ -37,6 +37,9 @@ class Instructor extends Person {
 class Student extends Person {
   constructor(param) {
     super(param)
+    this.previousBackground = param.previousBackground
+    this.className = param.className
+    this.favSubjects = param.favSubjects
   }
 }
 

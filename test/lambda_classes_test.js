@@ -52,3 +52,21 @@ test('Instructor parameters', t => {
   t.is(john.favLanguage, "JavaScript")
   t.is(john.catchPhrase, "Don't forget the homies")
 })
+
+test('Student parameters', t => {
+  let jane = new Student({
+    name: "Jane", age: 30, location: "Texas", gender: "Female",
+    previousBackground: "Scuba Instructor", className: "DS19", favSubjects: ['Html', 'CSS', 'JavaScript']
+  })
+
+  // Inherited properties
+  t.is(jane.name, "Jane")
+  t.is(jane.age, 30)
+  t.is(jane.location, "Texas")
+  t.is(jane.gender, "Female")
+
+  // Unique properties
+  t.is(jane.previousBackground, "Scuba Instructor")
+  t.is(jane.className, "DS19")
+  t.truthy(jane.favSubjects.includes("CSS"))
+})
