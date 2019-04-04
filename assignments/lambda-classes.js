@@ -24,6 +24,14 @@ class Instructor extends Person {
     this.favLanguage = param.favLanguage
     this.catchPhrase = param.catchPhrase
   }
+
+  demo(subject) {
+    return `Today we are learning about ${subject}`
+  }
+
+  grade(student, subject) {
+    return `${student.name} receives a perfect score on ${subject}`
+  }
 }
 
 class Student extends Person {
