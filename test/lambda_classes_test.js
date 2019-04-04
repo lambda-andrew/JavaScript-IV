@@ -29,14 +29,8 @@ test('Person parameters', t => {
   t.is(john.gender, "Male")
 })
 
-// Create 2 - 3 objects for each class and test their attributes:
+test('Person speak function', t => {
+  let john = new Person({ name: "John", age: 30, location: "Texas", gender: "Male"})
 
-// const fred = new Instructor({
-//   name: 'Fred',
-//   location: 'Bedrock',
-//   age: 37,
-//   gender: 'male',
-//   favLanguage: 'JavaScript',
-//   specialty: 'Front-end',
-//   catchPhrase: `Don't forget the homies`
-// });
+  t.is(john.speak(), 'Hello my name is John, I am from Texas.')
+})

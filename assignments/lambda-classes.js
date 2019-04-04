@@ -11,6 +11,10 @@ class Person {
     this.location = param.location
     this.gender = param.gender
   }
+
+  speak() {
+    return `Hello my name is ${this.name}, I am from ${this.location}.`
+  }
 }
 
 class Instructor extends Person {
