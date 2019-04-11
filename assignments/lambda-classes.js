@@ -26,6 +26,17 @@ class Instructor extends Person{
   grade = function(student, subject){
     return `${student.name} received a perfect grade in ${subject}`;
   }
+  gradePointAv = function(student){
+    return Math.ceil(Math.random(student.grade) * 50);
+  }
+  graduate = function(student){
+    if(student.grade > 70){
+      return `${student.name} will graduate!`;
+}
+    else{
+      return `${this.name} will go back over the material with ${student.name}`;
+    }
+}
 }
 
 class Student extends Person{
@@ -34,6 +45,7 @@ class Student extends Person{
   this.previousBackground = studAtt.previousBackground;
   this.className = studAtt.className;
   this.favSubjects = studAtt.favSubjects;
+  this.grade = studAtt.grade;
 }
   listsSubjects = function(){
     return `${this.favSubjects}`;
@@ -45,6 +57,7 @@ class Student extends Person{
     return `${this.name} has begun Sprint Challenge on ${subject}`;
   }
 }
+
 
 class ProjectManager extends Instructor{
   constructor(instAtt){
@@ -86,6 +99,7 @@ const jerry = new Student({
   age: 21,
   location: "Nashville",
   gender: "M",
+  grade: 95,
   previousBackground: "I worked at McDonalds.",
   className: "Web30",
   favSubjects: ["HTML", "CSS", "UX"]
@@ -96,6 +110,7 @@ const jackie = new Student({
   age: 22,
   location: "Greenville",
   gender: "F",
+  grade: 40,
   previousBackground: "I was a babysitter.",
   className: "Web28",
   favSubjects: ["JS", "Ruby", "UX"]
@@ -106,6 +121,7 @@ const jim = new Student({
   age: 19,
   location: "Ashville",
   gender: "M",
+  grade: 75,
   previousBackground: "I was a lifegaurd.",
   className: "Web10",
   favSubjects: ["HTML", "Python", "CSS"]
@@ -186,3 +202,7 @@ console.log(jackie.PRAssignment("Javascript"));
 console.log(jim.sprintChallenge("UX"));
 console.log(jacob.standUp("Web19"));
 console.log(mallorie.debugsCode("David", jim, "Ruby"))
+console.log(jacob.gradePointAv(jim));
+console.log(mallorie.gradePointAv(jerry));
+console.log(david.graduate(jim));
+console.log(gary.graduate(jackie));
