@@ -18,7 +18,7 @@ class Instructor extends Person {
         this.catchPhrase = props.catchPhrase;
     }
     demo(subject){
-        console.log(`Today we are learning about ${subject}`);
+        console.log(`Today we are learning about ${subject}.`);
     }
     grade(student, subject){
         console.log(`${student} receives a perfect score on ${subject}.`);
@@ -30,13 +30,14 @@ class Student extends Instructor {
         super(props);
         this.previousBackground = props.previousBackground;
         this.className = props.className;
-        this.favSubject = props.favSubject;
+        this.favSubjects = props.favSubjects;
     }
     listsSubjects(){
         //a method that logs out all of student's favSubjects one by one
+        console.log(`${favSubjects}`);
     }
     PRAssignment(subject) {
-        console.log(`${this.name} has submitted a PR for ${subject}`);
+        console.log(`${this.name} has submitted a PR for ${subject}.`);
     }
     sprintChallenge(subject){
         console.log(`${this.name} has begun sprint challenge on ${subject}.`);
@@ -53,7 +54,7 @@ class ProjectManager extends Instructor {
         console.log(`${this.name} announces to ${channel}, @channel standy times!`);
     }
     debugsCode(student, subject){
-        console.log(`${this.name} debugs ${student.name}'s code on ${subject}`);
+        console.log(`${this.name} debugs ${student}'s code on ${subject}`);
     }
 }
 
@@ -61,7 +62,7 @@ const eric = new Student({
     name: 'Eric',
     age: 27,
     gender: 'Male',
-    favSubject: 'JavaScript',
+    favSubjects: ['Html', 'CSS', 'JavaScript'],
     specialty: 'Learning'
 });
 
@@ -82,5 +83,5 @@ const atb = new ProjectManager({
 console.log(atb.gradClassName);
 console.log(cJ.favLanguage);
 console.log(cJ.grade('Eric', 'JavaScript Classes'));
-console.log(eric.specialty);
+console.log(eric.favSubjects);
 console.log(atb.standUp('the BEST channel'));
