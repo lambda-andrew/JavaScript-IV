@@ -45,3 +45,18 @@ class Student extends Person {
     `${this.name} has begun sprint challenge on ${subject}`
   }
 }
+
+class ProjectManagers extends Instructor {
+  constructor(pmProps) {
+    super(pmProps) {
+      this.gradClassName = pmProps.gradClassName;
+      this.favInstructor = pmProps.favInstructor;
+    }
+  }
+  standUp() {
+    `${this.name} announces to ${channel}, @channel standy times!​​​​​`
+  }
+  debugsCode() {
+    `${this.name} debugs ${student.name}'s code on ${subject}``
+  }
+}
