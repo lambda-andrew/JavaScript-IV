@@ -21,7 +21,7 @@ class Instructor extends Person {
         console.log(`Today we are learning about ${subject}`);
     }
     grade(student, subject){
-        console.log(`${student.name} receives a perfect score on ${subject}.`);
+        console.log(`${student} receives a perfect score on ${subject}.`);
     }
 }
 
@@ -81,4 +81,6 @@ const atb = new ProjectManager({
 
 console.log(atb.gradClassName);
 console.log(cJ.favLanguage);
+console.log(cJ.grade('Eric', 'JavaScript Classes'));
 console.log(eric.specialty);
+console.log(atb.standUp('the BEST channel'));
