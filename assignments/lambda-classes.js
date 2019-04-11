@@ -30,7 +30,7 @@ class Student extends Instructor {
         super(props);
         this.previousBackground = props.previousBackground;
         this.className = props.className;
-        this.favSubject = props.favLanguage;
+        this.favSubject = props.favSubject;
     }
     listsSubjects(){
         //a method that logs out all of student's favSubjects one by one
@@ -61,6 +61,20 @@ const eric = new Student({
     name: 'Eric',
     age: 27,
     gender: 'Male',
-    favLanguage: 'JavaScript',
+    favSubject: 'JavaScript',
     specialty: 'Learning'
 });
+
+const cJ = new Instructor({
+    name: 'CJ',
+    age: 30,
+    gender: 'Male',
+    favLanguage: 'React'
+});
+
+
+
+
+
+console.log(cJ.favLanguage);
+console.log(eric.favSubject);
