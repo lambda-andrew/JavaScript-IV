@@ -173,3 +173,48 @@ const thirdStudent = new Student({
 // console.log(thirdStudent.listsSubjects());
 // console.log(thirdStudent.PRAssignment('Escaping the Wilderness'));
 // console.log(thirdStudent.sprintChallenge('Escaping the Wilderness'));
+
+// == ProjectManagers ==
+const firstPM = new ProjectManagers({
+  name: 'Henriet',
+  age: 30,
+  location: 'Cathedral Ward',
+  gender: 'female',
+  specialty: 'Hunting Monsters',
+  favLanguage: 'English',
+  catchPhrase: '...Henriet just gives you an odd look.',
+  gradClassName: 'Year 0',
+  favInstructor: 'Gerhman'
+});
+
+const secondPM = new ProjectManagers({
+  name: 'Madman Wallar',
+  age: 50,
+  location: 'Lower Pthumeru Chalice',
+  gender: 'male',
+  specialty: 'Hunting Monsters',
+  favLanguage: 'English',
+  catchPhrase: '...Gibberish is all you can hear...',
+  gradClassName: 'Year 0',
+  favInstructor: 'Gerhman'
+});
+
+const thirdPM = new ProjectManagers({
+  name: 'Henryk',
+  age: 75,
+  location: 'Byrgenwerth',
+  gender: 'male',
+  specialty: 'Hunting Monsters',
+  favLanguage: 'English',
+  catchPhrase: 'Roars at you.',
+  gradClassName: 'Year 0',
+  favInstructor: 'Gerhman'
+});
+
+/* == Testing == */
+// console.log(secondPM);
+// console.log(secondPM.speak());
+// console.log(secondPM.demo('Monster Dying'));
+// console.log(secondPM.grade(thirdStudent, 'Monster Dying'));
+// console.log(secondPM.standUp('Hunter Killing'));
+// console.log(secondPM.debugsCode(secondStudent, 'Enslaving Organics!'));
