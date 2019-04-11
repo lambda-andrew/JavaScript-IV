@@ -96,3 +96,34 @@ class Project Manager extends Instructor{
     return `${name} debugs ${student.name}'s code on ${subject}.`
   }
 }
+
+const jack = new Person{
+  name: "Jack",
+  age: 34,
+  location: "Kentucky",
+  gender: "M"
+}
+
+const amy = new Person{
+  name: "Amy",
+  age: 30,
+  location: "St. Louis",
+  gender: "F"
+}
+
+const emily = new Person{
+  name: "Emily",
+  age: 24,
+  location: "Michigan",
+  gender: "F"
+}
+
+const jerry = new Student{
+  name: "Jerry",
+  age: 21,
+  location: "Nashville",
+  gender: "M",
+  previousBackground: "I worked at McDonalds.",
+  className: "Web30",
+  favSubjects: ["HTML", "CSS", "UX"]
+}
