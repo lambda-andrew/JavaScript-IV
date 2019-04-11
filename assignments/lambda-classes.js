@@ -56,10 +56,16 @@ class Student extends Person{
 };
 
 
-class ProjectManager extends Student {
+class ProjectManager extends Instructor {
     constructor(props){
-        this.name = props.age;
-        this.age = props.age;
-        this.location = props.location;
+        this.gradClassName = props.gradClassName;
+        this.favInstructor = props.favInstructor;
     };
+
+    standUp(channel) {
+        return `${this.name} announces to ${channel}, @channel standy times!​​​​​`
+    };
+
+    debugsCode()
+
 };
