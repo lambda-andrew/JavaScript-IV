@@ -127,3 +127,53 @@ const jerry = new Student{
   className: "Web30",
   favSubjects: ["HTML", "CSS", "UX"]
 }
+
+const jackie = new Student{
+  name: "Jackie",
+  age: 22,
+  location: "Greenville",
+  gender: "F",
+  previousBackground: "I was a babysitter.",
+  className: "Web28",
+  favSubjects: ["JS", "Ruby", "UX"]
+}
+
+const jim = new Student{
+  name: "Jim",
+  age: 19,
+  location: "Ashville",
+  gender: "M",
+  previousBackground: "I was a lifegaurd.",
+  className: "Web10",
+  favSubjects: ["HTML", "Python", "CSS"]
+}
+
+const tammy = new Instructor{
+  name: "Tammy",
+  age: 30,
+  location: "Washington",
+  gender: "F",
+  specialty: "Javascript",
+  favLanguage: "Python",
+  catchPhrase: `Everybody's a critic.`
+}
+
+const jeff = new Instructor{
+  name: "Jeff",
+  age: 35,
+  location: "Louisiana",
+  gender: "M",
+  specialty: "LESS",
+  favLanguage: "React",
+  catchPhrase: `You are not what you drink.`
+}
+
+const david = new Instructor{
+  name: "David",
+  age: 25,
+  location: "Pennsylvania",
+  gender: "M",
+  specialty: "HTML",
+  favLanguage: "C+",
+  catchPhrase: `To be or not to be is not a question.`
+}
