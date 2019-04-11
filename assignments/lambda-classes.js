@@ -123,3 +123,53 @@ const thirdHunter = new Instructor({
 // console.log(secondHunter.speak());
 // console.log(secondHunter.demo('killing Hunters that attack my monsters'));
 // console.log(secondHunter.grade('Hunter', 'killing Hunters that attack my monsters'));
+
+// == Student ==
+const firstStudent = new Student({
+  name: 'Brennan',
+  age: 24,
+  location: 'Texas',
+  gender: 'male',
+  previousBackground: 'Writer',
+  className: 'WEB19',
+  favSubjects: [
+    'JavaScript IV',
+    'JavaScript',
+    'JavaScript'
+  ]
+});
+
+const secondStudent = new Student({
+  name: 'Cortana',
+  age: 9,
+  location: 'Chosen controlled space; formally UNSC space',
+  gender: 'female',
+  previousBackground: 'Partner to The Master Chief',
+  className: 'Class 2549',
+  favSubjects: [
+    'Enslaving organic life',
+    'Saving The Master Chief',
+    'Being Composed'
+  ]
+});
+
+const thirdStudent = new Student({
+  name: 'The Master Chief',
+  age: 48,
+  location: 'UNSC Infinity',
+  gender: 'male',
+  previousBackground: 'Civilian child',
+  className: 'ORION Project Generation II',
+  favSubjects: [
+    'Strategy',
+    'Combat',
+    'Protecting Humanity'
+  ]
+});
+
+/* == Testing == */
+// console.log(thirdStudent);
+// console.log(thirdStudent.speak());
+// console.log(thirdStudent.listsSubjects());
+// console.log(thirdStudent.PRAssignment('Escaping the Wilderness'));
+// console.log(thirdStudent.sprintChallenge('Escaping the Wilderness'));
