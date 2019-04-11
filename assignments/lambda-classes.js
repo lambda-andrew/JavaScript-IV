@@ -84,7 +84,7 @@ class Student extends Person{
   }
 }
 
-class Project Manager extends Instructor{
+class ProjectManager extends Instructor{
   constructor(instAtt);
   super(instAtt);
   this.gradClassName = instAtt.gradClassName;
@@ -176,4 +176,40 @@ const david = new Instructor{
   specialty: "HTML",
   favLanguage: "C+",
   catchPhrase: `To be or not to be is not a question.`
+}
+
+const gary = new ProjectManager{
+  name: "Gary",
+  age: 42,
+  location: "Idaho",
+  gender: "M",
+  specialty: "UX",
+  favLanguage: "C#",
+  catchPhrase: `When you fall off the horse, try a different horse.`,
+  gradClassname: "Web15",
+  favInstructor: "David"
+}
+
+const mallorie = new ProjectManager{
+  name: "Mallorie",
+  age: 50,
+  location: "North Carolina",
+  gender: "F",
+  specialty: "CSS",
+  favLanguage: "React",
+  catchPhrase: `The bigger they are, the harder they fall, unless they're rich.`,
+  gradClassname: "Web12",
+  favInstructor: "Tammy"
+}
+
+const jacob = new ProjectManager{
+  name: "Jacob",
+  age: 53,
+  location: "Utah",
+  gender: "M",
+  specialty: "HTML",
+  favLanguage: "Javascript",
+  catchPhrase: `I think, therefore I don't know.`,
+  gradClassname: "Web2",
+  favInstructor: "Tammy"
 }
