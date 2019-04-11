@@ -19,10 +19,10 @@ class Instructor extends Person {
     this.favLanguage = instProps.favLanguage;
     this.catchPhrase = instProps.catchPhrase;
   }
-  demo() {
+  demo(subject) {
     `Today we are learning about ${subject}`
   }
-  grade() {
+  grade(subject) {
     `${student.name} receives a perfect score on ${subject}`
   }
 }
@@ -38,10 +38,10 @@ class Student extends Person {
   listsSubjects() {
     `Favorite subjects are: ${this.favSubject}`
   }
-  PRAssignment() {
+  PRAssignment(subject) {
     `${this.name} has submitted a PR for ${subject}`
   }
-  sprintChallenge() {
+  sprintChallenge(subject) {
     `${this.name} has begun sprint challenge on ${subject}`
   }
 }
@@ -53,10 +53,10 @@ class ProjectManagers extends Instructor {
       this.favInstructor = pmProps.favInstructor;
     }
   }
-  standUp() {
+  standUp(channel) {
     `${this.name} announces to ${channel}, @channel standy times!​​​​​`
   }
-  debugsCode() {
+  debugsCode(student, subject) {
     `${this.name} debugs ${student.name}'s code on ${subject}``
   }
 }
