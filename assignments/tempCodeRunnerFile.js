@@ -1,6 +1,4 @@
-  // listsSubjects(){
-  //   for (const i = 0 ;i < favSubjects.length;i++){
-  //     favSubjects[i];
-  //   }
-  //   return console.log("1");
-  // }
+function CharacterStats(characterStatsOptions) {
+//   GameObject.call(this, characterStatsOptions);
+//   this.healthPoints = characterStatsOptions.healthPoints;
+// }

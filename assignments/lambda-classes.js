@@ -31,12 +31,12 @@ class Students extends Person{
     this.className = Atts.className;
     this.favSubjects = Atts.favSubjects;
   }
-  // listsSubjects(){
-  //   for (const i = 0 ;i < favSubjects.length;i++){
-  //     favSubjects[i];
-  //   }
-  //   return console.log("1");
-  // }
+  listsSubjects(){
+    for (let i = 0 ;i < this.favSubjects.length;i++){
+       console.log( this.favSubjects[i]);
+    }
+    //return console.log("1");
+  }
   PRAssignment(subject){
     return console.log(`${this.name} has submitted a PR for ${subject}`);
   }
@@ -80,7 +80,7 @@ const jack = new Students({
   catchPhrase: "i'm hungary",
   previousBackground:"marketing",
   className: "web1",
-  favSubjects:["cs","javascript"]
+  favSubjects:["cs","javascript","python"]
 });
 
 
@@ -102,7 +102,7 @@ const josh = new Project_Managers({
 console.log(josh.speak());
 console.log(fred.demo("math"));
 console.log(josh.grade("math"));
-//console.log(jack.listsSubjects());
+console.log(jack.listsSubjects());
 console.log(jack.PRAssignment("cs"));
 console.log(jack.sprintChallenge("cs"));
 console.log(josh.standup("web3"));
