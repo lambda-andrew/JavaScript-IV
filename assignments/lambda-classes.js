@@ -76,6 +76,7 @@ const cJ = new Instructor({
 const atb = new ProjectManager({
     name: 'Andrew',
     gender: 'Male',
+    location: 'Earth',
     gradClassName: 'WEB-19'
 });
 
@@ -85,3 +86,4 @@ console.log(cJ.favLanguage);
 console.log(cJ.grade('Eric', 'JavaScript Classes'));
 console.log(eric.favSubjects);
 console.log(atb.standUp('the BEST channel'));
+console.log(atb.speak());
