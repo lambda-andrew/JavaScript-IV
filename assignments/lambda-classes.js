@@ -81,9 +81,9 @@ const atb = new ProjectManager({
 });
 
 
-console.log(atb.gradClassName);
-console.log(cJ.favLanguage);
-console.log(cJ.grade('Eric', 'JavaScript Classes'));
-console.log(eric.favSubjects);
-console.log(atb.standUp('the BEST channel'));
-console.log(atb.speak());
+console.log(atb.gradClassName); //WEB-19
+console.log(cJ.favLanguage); //React
+console.log(cJ.grade('Eric', 'JavaScript Classes')); //Eric receives a perfect score on JavaScript Classes
+console.log(eric.favSubjects); //Html, CSS, JavaScript
+console.log(atb.standUp('the BEST channel')); //Andrew announces to the BEST channel, @channel standy times!    
+console.log(atb.speak()); //Hello my name is Andrew, I am from Earth.
