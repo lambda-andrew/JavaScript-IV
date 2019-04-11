@@ -6,7 +6,7 @@ class Person {
         this.gender = props.gender;
     }
     speak(){
-        return `Hello my name is ${this.name}, I am from ${this.location}.`
+        console.log(`Hello my name is ${this.name}, I am from ${this.location}.`);
     }
 }
 
@@ -33,7 +33,7 @@ class Student extends Instructor {
         this.favSubject = props.favLanguage;
     }
     listsSubjects(){
-
+        //a method that logs out all of student's favSubjects one by one
     }
     PRAssignment(subject) {
         console.log(`${this.name} has submitted a PR for ${subject}`);
