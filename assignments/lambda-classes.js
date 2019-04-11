@@ -86,3 +86,40 @@ const thirdGuest = new Person({
 /* == Testing == */
 // console.log(firstGuest);
 // console.log(thirdGuest.speak());
+
+// == Instructor ==
+const firstHunter = new Instructor({
+  name: 'Old Hunter Gerhman',
+  age: 400,
+  location: 'Hunters Dream',
+  gender: 'male',
+  specialty: 'Monster Killing',
+  favLanguage: 'English',
+  catchPhrase: 'Tonight... Gehrman joins the hunt.....'
+});
+
+const secondHunter = new Instructor({
+  name: 'Djura',
+  age: 50,
+  location: 'Old Yharnam',
+  gender: 'male',
+  specialty: 'Protecting Old Yharnam from Hunters',
+  favLanguage: 'English',
+  catchPhrase: 'You there, hunter. Didnt you see the warning? Turn back at once..'
+});
+
+const thirdHunter = new Instructor({
+  name: 'Alfred',
+  age: 23,
+  location: 'Cathedral Ward',
+  gender: 'male',
+  specialty: 'Killing Vileblood',
+  favLanguage: 'English',
+  catchPhrase: 'There must be oodles for us to share..'
+});
+
+/* == Testing == */
+// console.log(secondHunter);
+// console.log(secondHunter.speak());
+// console.log(secondHunter.demo('killing Hunters that attack my monsters'));
+// console.log(secondHunter.grade('Hunter', 'killing Hunters that attack my monsters'));
