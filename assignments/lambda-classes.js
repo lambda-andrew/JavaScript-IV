@@ -15,9 +15,9 @@ class Person {
 class Instructor extends Person {
   constructor(instProps) {
     super(instProps);
-    this.specialty = instProps.gender;
-    this.favLanguage = instProps.gender;
-    this.catchPhrase = instProps.gender;
+    this.specialty = instProps.specialty;
+    this.favLanguage = instProps.favLanguage;
+    this.catchPhrase = instProps.catchPhrase;
   }
   demo() {
     `Today we are learning about ${subject}`
