@@ -72,9 +72,13 @@ const cJ = new Instructor({
     favLanguage: 'React'
 });
 
+const atb = new ProjectManager({
+    name: 'Andrew',
+    gender: 'Male',
+    gradClassName: 'WEB-19'
+});
 
 
-
-
+console.log(atb.gradClassName);
 console.log(cJ.favLanguage);
-console.log(eric.favSubject);
+console.log(eric.specialty);
